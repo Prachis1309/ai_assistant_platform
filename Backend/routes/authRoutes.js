@@ -36,10 +36,10 @@ const loginValidation=[
 ];
 
 router.post('/register', registerValidation, register);
-router.post('login',loginValidation, login);
+router.post('/login',loginValidation, login);
 
 router.get('/profile', protect, getProfile);
-router.get('/Profile', protect, updateProfile);
+router.put('/profile', protect, updateProfile);
 router.post('/change-password',protect,changePassword);
 
 export default router;
